@@ -1,83 +1,155 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
+  <div>
+    <v-row class="justify-center mt-5">
+      <v-col cols="12" sm="12" md="10">
+        <div class="top-bar-sec pa-3">
+          <v-row class="justify-center align-center">
+            <v-col cols="12" sm="6" md="2">
+              <div class="rounded-lg primary py-2 d-flex align-center justify-center">
+                <div>
+                  <v-icon color="purple darken-3">mdi-check-circle</v-icon>
+                </div>
+                <div class="ml-3">
+                  <h5 class="my-0 white--text">382</h5>
+                  <p class="mb-0 white--text">Points</p>
+                </div>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="6" md="2">
+              <div class="text-center">
+                <v-icon color="purple darken-3">mdi-check-circle</v-icon>
+                <p class="mb-0 mt-2">0X89205A3B2ae...</p>
+                <h4 class="mt-1 purple--text text--darken-3 mb-0">
+                  BSC Verified
+                </h4>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="6" md="2">
+              <div class="text-center">
+                <v-icon color="purple darken-3">mdi-check-circle</v-icon>
+                <p class="mb-0 mt-2">0X89205A3B2ae...</p>
+                <h4 class="mt-1 purple--text text--darken-3 mb-0">
+                  SOL Verified
+                </h4>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="6" md="2">
+              <div class="text-center">
+                <v-icon color="purple darken-3">mdi-check-circle</v-icon>
+                <p class="mb-0 mt-2">Telegram</p>
+                <h4 class="mt-1 purple--text text--darken-3 mb-0">Connected</h4>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="6" md="2">
+              <div class="text-center">
+                <v-icon color="purple darken-3">mdi-check-circle</v-icon>
+                <p class="mb-0 mt-2">mail@gmail.com</p>
+                <h4 class="mt-1 purple--text text--darken-3 mb-0">Connected</h4>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row class="justify-center mt-5">
+      <v-col cols="12" sm="12" md="11">
+        <v-card class="rounded-lg pa-5 overflow-auto" height="500px">
+          <div class="text-center">
+            <h3 class="font-weight-bold">Do a task for extra points</h3>
+            <p class="mb-0 text-body-1">
+              Weyu Points are redeemable for all sorts of crypto.
+            </p>
+            <p class="text-body-1">
+              NFTs and prizes in the WEYU Points marketplace
+            </p>
+            <v-btn
+              depressed
+              color="purple darken-3"
+              class="white--text rounded-lg"
             >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+              Redeem your points
+            </v-btn>
           </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+          <v-row class="mt-5">
+            <v-col
+              cols="12"
+              sm="4"
+              md="2"
+              v-for="(item, index) in pointsData"
+              :key="index"
+            >
+              <PointCard :pointsData="item" />
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
-<script>
-export default {
-  name: 'IndexPage'
-}
+<script lang="ts">
+import Vue from "vue";
+import { pointsData } from "~/types";
+export default Vue.extend({
+  data() {
+    return {
+      pointsData: [
+        {
+          point: "2x",
+          title: "Comment on Twitter",
+        },
+        {
+          point: "3x",
+          title: "WEYU Top 5",
+        },
+        {
+          point: "1x",
+          title: "Like an instagram",
+        },
+        {
+          point: "2x",
+          title: "Share Twitter",
+        },
+        {
+          point: "1x",
+          title: "WEYU Top 5",
+        },
+        {
+          point: "3x",
+          title: "Share Twitter post",
+        },
+        {
+          point: "2x",
+          title: "Comment on Twitter",
+        },
+        {
+          point: "5x",
+          title: "Like Youtube video",
+        },
+        {
+          point: "2x",
+          title: "Comment on Twitter",
+        },
+        {
+          point: "3x",
+          title: "WEYU Top 5",
+        },
+        {
+          point: "1x",
+          title: "Like an instagram",
+        },
+        {
+          point: "2x",
+          title: "Share Twitter",
+        },
+      ] as pointsData[],
+    };
+  },
+});
 </script>
+<style lang="scss" scoped>
+.top-bar-sec {
+  border: 1px solid #ededed;
+  border-radius: 8px;
+}
+</style>
