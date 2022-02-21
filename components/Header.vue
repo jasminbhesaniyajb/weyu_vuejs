@@ -16,6 +16,7 @@
             class="search-input ml-5"
             full-width
             hide-details
+            dense
           ></v-text-field>
         </div>
       </v-col>
