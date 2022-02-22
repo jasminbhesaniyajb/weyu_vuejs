@@ -31,7 +31,10 @@
               exact
             >
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold" v-text="item.title" />
+                <v-list-item-title
+                  class="font-weight-bold"
+                  v-text="item.title"
+                />
               </v-list-item-content>
             </v-list-item>
             <v-list-item>
@@ -41,19 +44,33 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-content>
-                <div class="d-flex align-center">
-                  <div>
-                    <v-avatar class="mr-3">
-                      <img
-                        src="https://cdn.vuetifyjs.com/images/john.jpg"
-                        alt="John"
-                      />
-                    </v-avatar>
-                  </div>
-                  <div>
-                    <span>User_name</span>
-                  </div>
-                </div>
+                <v-menu bottom transition="scale-transition" offset-y>
+                  <template v-slot:activator="{ on, attrs }">
+                    <div v-bind="attrs" v-on="on">
+                      <div class="d-flex align-center">
+                        <div>
+                          <v-avatar class="mr-3">
+                            <img
+                              src="https://cdn.vuetifyjs.com/images/john.jpg"
+                              alt="John"
+                            />
+                          </v-avatar>
+                        </div>
+                        <div>
+                          <span>User_name</span>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title>
+                        <v-icon>mdi-logout </v-icon>
+                        Logout</v-list-item-title
+                      >
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -64,19 +81,33 @@
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <div class="d-flex align-center">
-              <div>
-                <v-avatar class="mr-3">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    alt="John"
-                  />
-                </v-avatar>
-              </div>
-              <div>
-                <span>User_name</span>
-              </div>
-            </div>
+            <v-menu bottom transition="scale-transition" offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <div v-bind="attrs" v-on="on">
+                  <div class="d-flex align-center">
+                    <div>
+                      <v-avatar class="mr-3">
+                        <img
+                          src="https://cdn.vuetifyjs.com/images/john.jpg"
+                          alt="John"
+                        />
+                      </v-avatar>
+                    </div>
+                    <div>
+                      <span>User_name</span>
+                    </div>
+                  </div>
+                </div>
+              </template>
+              <v-list>
+                <v-list-item>
+                  <v-list-item-title>
+                    <v-icon>mdi-logout </v-icon>
+                    Logout</v-list-item-title
+                  >
+                </v-list-item>
+              </v-list>
+            </v-menu>
           </v-list-item-content>
         </v-list-item>
         <v-list-item
