@@ -5,9 +5,9 @@
         <div class="top-bar-sec pa-3">
           <v-row class="justify-center align-center">
             <v-col cols="12" sm="6" md="2">
-              <div class="rounded-lg primary py-2 d-flex align-center justify-center">
+              <div class="rounded-lg primary py-2 d-flex align-center justify-center bg-gradient">
                 <div>
-                  <v-icon color="purple darken-3">mdi-check-circle</v-icon>
+                  <v-icon color="white">mdi-check-circle</v-icon>
                 </div>
                 <div class="ml-3">
                   <h5 class="my-0 white--text">382</h5>
@@ -122,5 +122,8 @@ export default Vue.extend({
 .top-bar-sec {
   border: 1px solid #ededed;
   border-radius: 8px;
+}
+.bg-gradient {
+ background: linear-gradient(53deg, rgba(0,212,255,0.6250875350140056) 0%, rgba(9,9,121,0.577468487394958) 51%, rgba(255,0,44,0.8379726890756303) 100%);
 }
 </style>

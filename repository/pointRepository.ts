@@ -4,7 +4,7 @@ import { PointRepo } from "~/types";
 const points = [
   {
     point: "2x",
-    title: "Comment on Twitter anajndkflam",
+    title: "Comment on Twitter",
   },
   {
     point: "3x",
