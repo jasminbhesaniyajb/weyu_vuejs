@@ -1,5 +1,4 @@
 <template>
-  <!-- <v-app> -->
   <div>
     <v-row class="align-center mx-auto">
       <v-col cols="12" sm="12" md="6">
@@ -44,7 +43,7 @@
             </v-list-item>
             <v-list-item>
               <v-list-item-content>
-                <v-menu bottom transition="scale-transition" offset-y>
+                <v-menu bottom transition="scale-transition" offset-y nudge-bottom="5">
                   <template v-slot:activator="{ on, attrs }">
                     <div v-bind="attrs" v-on="on">
                       <div class="d-flex align-center">
@@ -77,11 +76,11 @@
         </div>
       </v-col>
     </v-row>
-    <v-navigation-drawer v-model="drawer" fixed>
+    <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-menu bottom transition="scale-transition" offset-y>
+            <v-menu bottom transition="scale-transition" offset-y nudge-bottom="5">
               <template v-slot:activator="{ on, attrs }">
                 <div v-bind="attrs" v-on="on">
                   <div class="d-flex align-center">
@@ -124,7 +123,6 @@
       </v-list>
     </v-navigation-drawer>
   </div>
-  <!-- </v-app> -->
 </template>
 <script lang="ts">
 import Vue from "vue";
