@@ -7,7 +7,9 @@
             Refer friends for extra tiskets
           </h3>
           <p class="mb-0 text-caption text-center">
-            Use your unique link below to refer your friends. You earn <span class="purple--text text--darken-3">2x points</span> for everyone who register trough your link
+            Use your unique link below to refer your friends. You earn
+            <span class="purple--text text--darken-3">2x points</span> for
+            everyone who register trough your link
           </p>
           <v-text-field
             outlined
@@ -28,16 +30,21 @@
               </v-btn>
             </template>
           </v-text-field>
-          <div class="d-flex justify-center mt-3">
-            <v-btn depressed outlined class="primary--text mr-5 rounded-lg"
-              >Share on Twitter <v-icon right> mdi-twitter </v-icon></v-btn
-            >
-            <v-btn depressed outlined class="primary--text rounded-lg"
-              >Share on Telegram
-              
-              <span class="ml-2"><img src="~/assets/icons/telegram.svg" alt="" /></span>
-            </v-btn>
-          </div>
+          <v-row class="mt-3">
+            <v-col cols="12" sm="6" md="6">
+              <v-btn depressed outlined block class="primary--text rounded-lg text-capitalize"
+                >Share on Twitter <v-icon right> mdi-twitter </v-icon></v-btn
+              >
+            </v-col>
+            <v-col cols="12" sm="6" md="6">
+              <v-btn depressed outlined block class="primary--text rounded-lg text-capitalize"
+                >Share on Telegram
+                <span class="ml-2"
+                  ><img src="~/assets/icons/telegram.svg" alt=""
+                /></span>
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-card>
       </v-col>
     </v-row>
