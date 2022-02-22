@@ -99,6 +99,22 @@ export default Vue.extend({
     pointsData(): PointsData {
       return this.$store.state.point.points
     },
+  },
+  async fetch() {
+    console.log("calll fetch");
+    
+      try {
+      await this.$store.dispatch(
+        'point/fetchPoints',
+        {
+          api: this.$api,
+          page: 1,
+          per: 50,
+        }
+      )
+    } catch (error) {
+     console.log("error", error);
+    }
   }
 });
 </script>

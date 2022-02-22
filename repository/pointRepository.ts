@@ -60,8 +60,8 @@ export default ($axios: NuxtAxiosInstance): PointRepo => ({
       //   });
       //   if (res.status === 200) {
       // return res.data;
-      return points
       //   }
+      return { points };
     } catch (error) {
       console.log("error", error);
     }
