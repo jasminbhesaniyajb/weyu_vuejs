@@ -89,62 +89,17 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { pointsData } from "~/types";
+import { PointsData } from "~/types";
 export default Vue.extend({
   data() {
     return {
-      pointsData: [
-        {
-          point: "2x",
-          title: "Comment on Twitter",
-        },
-        {
-          point: "3x",
-          title: "WEYU Top 5",
-        },
-        {
-          point: "1x",
-          title: "Like an instagram",
-        },
-        {
-          point: "2x",
-          title: "Share Twitter",
-        },
-        {
-          point: "1x",
-          title: "WEYU Top 5",
-        },
-        {
-          point: "3x",
-          title: "Share Twitter post",
-        },
-        {
-          point: "2x",
-          title: "Comment on Twitter",
-        },
-        {
-          point: "5x",
-          title: "Like Youtube video",
-        },
-        {
-          point: "2x",
-          title: "Comment on Twitter",
-        },
-        {
-          point: "3x",
-          title: "WEYU Top 5",
-        },
-        {
-          point: "1x",
-          title: "Like an instagram",
-        },
-        {
-          point: "2x",
-          title: "Share Twitter",
-        },
-      ] as pointsData[],
     };
   },
+  computed: {
+    pointsData(): PointsData {
+      return this.$store.state.point.points
+    },
+  }
 });
 </script>
 <style lang="scss" scoped>

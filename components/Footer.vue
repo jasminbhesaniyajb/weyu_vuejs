@@ -6,8 +6,8 @@
           <h3 class="font-weight-bold text-center my-0">
             Refer friends for extra tiskets
           </h3>
-          <p class="mb-0 text-body-1 text-center">
-            Use your unique link below to refer your friends
+          <p class="mb-0 text-caption text-center">
+            Use your unique link below to refer your friends. You earn <span class="purple--text text--darken-3">2x points</span> for everyone who register trough your link
           </p>
           <v-text-field
             outlined
@@ -33,8 +33,10 @@
               >Share on Twitter <v-icon right> mdi-twitter </v-icon></v-btn
             >
             <v-btn depressed outlined class="primary--text rounded-lg"
-              >Share on Telegram</v-btn
-            >
+              >Share on Telegram
+              
+              <span class="ml-2"><img src="~/assets/icons/telegram.svg" alt="" /></span>
+            </v-btn>
           </div>
         </v-card>
       </v-col>
