@@ -23,10 +23,10 @@ export const actions: ActionTree<PointState, RootState> = {
       per?: number;
     }
   ) {
-    const { points }  = await params.api.pointRepo.fetchPoints({
+    const { data }  = await params.api.pointRepo.fetchPoints({
       page: params.page,
       per: params.per,
     });
-    commit("setPoint", points);
+    commit("setPoint", data);
   },
 };

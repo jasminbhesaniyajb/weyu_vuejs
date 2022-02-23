@@ -55,13 +55,13 @@ const points = [
 export default ($axios: NuxtAxiosInstance): PointRepo => ({
   async fetchPoints(params?: { page: number; per: number }) {
     try {
-      //   const res = await $axios.get("/points", {
-      //     params,
-      //   });
-      //   if (res.status === 200) {
-      // return res.data;
-      //   }
-      return { points };
+        const res = await $axios.get("https://weyu-backend.herokuapp.com/api/points", {
+          params,
+        });
+        if (res.status === 200) {
+          return res.data;
+        }
+      // return { points };
     } catch (error) {
       console.log("error", error);
     }
