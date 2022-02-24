@@ -1,6 +1,9 @@
 export interface PointsData {
-  point: string
+  id?: number
+  points: string
   title: string
+  socialApp: string
+  createdAt?: string
 }
 
 export interface PointRepo {
