@@ -11,7 +11,7 @@
     </div>
     <div class="text-center">
       <h3 class="purple--text text--darken-3 font-weight-bold mb-0 mt-0">
-        {{ pointsData.points }}X
+        {{ pointsData.points }}x
       </h3>
       <h4 class="font-weight-bold mt-0 text--purple">Points</h4>
       <p class="text-caption mb-2">{{ pointsData.title }}</p>
