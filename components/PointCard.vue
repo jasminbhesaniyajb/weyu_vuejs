@@ -17,7 +17,7 @@ export default Vue.extend({
   props: {
     pointsData: {
       type: Object,
-      required: false,
+      required: true,
       default() {
         return {};
       },
